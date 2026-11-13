@@ -4,11 +4,14 @@ import { resolve } from 'path'
 export default {
   root: resolve(__dirname, 'src'),
 
-  // Change the base path depending on the deployment platform
-  base: process.env.GITHUB_ACTIONS ? '/git-practice-cli/' : '/',
+  // Change the base path to your repository name
+  base: process.env.GITHUB_ACTIONS
+    ? '/git-practice-cli/'
+    : '/',
 
   build: {
-    outDir: '../dist'
+    outDir: '../dist',
+    emptyOutDir: true
   },
 
   server: {
