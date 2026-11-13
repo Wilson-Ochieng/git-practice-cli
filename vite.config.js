@@ -1,20 +1,16 @@
-
-import { resolve } from 'path'
+import { resolve } from "path";
 
 export default {
-  root: resolve(__dirname, 'src'),
+  root: resolve(__dirname, "src"),
 
   // Change the base path to your repository name
-  base: process.env.GITHUB_ACTIONS
-    ? '/git-practice-cli/'
-    : '/',
+  base: process.env.GITHUB_ACTIONS ? "/git-practice-cli/" : "/",
 
   build: {
-    outDir: '../dist',
-    emptyOutDir: true
+    outDir: resolve(__dirname, "dist"),
+    emptyOutDir: true,
   },
-
   server: {
-    port: 8080
-  }
-}
+    port: 8080,
+  },
+};
